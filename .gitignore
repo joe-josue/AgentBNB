@@ -1,0 +1,10 @@
+# Private — lives locally, never pushed to the public repo
+CLAUDE.md
+remotion/
+_private/
+*.mp4
+*.mov
+
+# System
+.DS_Store
+Thumbs.db
