@@ -1,0 +1,26 @@
+{
+  "overnight": {
+    "full": {
+      "weekday": 10990,
+      "friday-sunday": 12490,
+      "saturday": 14490,
+      "holiday": 17990,
+      "peak": 20490
+    },
+    "soft": {
+      "weekday": 8990,
+      "friday-sunday": 10990,
+      "saturday": 12490,
+      "holiday": 14990,
+      "peak": 17490
+    }
+  },
+  "daytrip": {
+    "weekday": 6990,
+    "friday": 7990,
+    "friday-sunday": 8490,
+    "saturday": 9490,
+    "holiday": 10490,
+    "peak": 12490
+  }
+}

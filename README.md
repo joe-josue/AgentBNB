@@ -1,84 +1,86 @@
 # AgentBNB
 
-[![Status](https://img.shields.io/badge/Status-Active_Prototype-orange.svg)]()
+[![Status](https://img.shields.io/badge/Status-Replication_Starter-orange.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)]()
-[![Version](https://img.shields.io/badge/Version-0.3.0-informational.svg)]()
+[![Version](https://img.shields.io/badge/Version-0.4.0-informational.svg)]()
 
-AgentBNB is a white-label hospitality operations stack, shaped from what is already running at Balay Pansol.
+AgentBNB is a white-label hospitality operations stack, extracted from a live operating system and packaged for replication.
 
-[Stack](#the-stack) · [Templates](#white-label-templates-in-this-repo) · [Roadmap](./ROADMAP.md) · [Pricing Harness](https://github.com/joe-josue/agentbnb-pricing-harness) · [Support](#support)
+[Stack Pack](./stack/) · [Roadmap](./ROADMAP.md) · [Pricing Harness](https://github.com/joe-josue/agentbnb-pricing-harness) · [Support](#support)
 
-## The Stack
+## What you can copy right now
+
+This repo now includes full stack starter assets, not only docs:
+
+- **System of Record template pack** (`stack/system-of-record-template/`)
+- **Website starter codebase** (`stack/website-template/`) with inquiry/admin/review flows
+- **Agent workspace starter codebase** (`stack/agent-workspace-template/`) with OpenClaw-style structure
+
+## Stack Components
 
 ### 1) System of Record (SoR)
-**What it is:** markdown-first property knowledge base and operating files.
+Canonical markdown-based knowledge base for property operations.
 
-**Components**
-- Property information, amenities, policies, scripts, workflows
-- Image and media reference folders
-- Ops docs used by owner, staff, and agent
+Includes:
+- property profile, amenities, policies, scripts, workflows
+- listing copy canon
+- media folders
+- changelog discipline
 
-**Why it matters**
-- Serves as source of truth for website content, listing consistency, and agent answers
-- Lets the agent update records as operations evolve
-- Keeps owner, staff, and guest communication aligned
+Why it matters:
+- keeps website, OTA listings, and agent responses consistent
+- gives agents complete context for guest support and ops updates
 
 ### 2) Website
-**What it is:** stripped-down white-label version of the Balay operating site.
+White-label Next.js hospitality site starter.
 
-**Technical stack**
-- Next.js + Tailwind (deployable on Vercel)
-- API routes for inquiry and admin flows
+Includes:
+- public pages and inquiry flow
+- availability + pricing estimation logic
+- admin API and admin UX for inquiries/bookings/notes/calendar
+- feedback and Google review loop
 
-**Capabilities**
-- Availability/calendar checking
-- Pricing estimator
-- Booking inquiry form
-- Admin side for inquiries, bookings, notes/briefing, and calendar
-- Feedback + Google Reviews flow
+### 3) Agent Workspace
+White-label hospitality agent workspace starter.
 
-### 3) Agent
-**What it is:** white-label version of Gideon’s operating posture and workflow.
+Includes:
+- `AGENTS.md`, `SOUL.md`, `USER.md`, `TOOLS.md`, `MEMORY.md`, `HEARTBEAT.md`
+- runbooks for inquiry and checkout loops
+- sample messaging/channel topology
 
-**Core behavior**
-- Reads and maintains SoR context
-- Supports website operations and updates
-- Works with admin functions (inquiries, bookings, notes, calendar)
-- Handles guest communication with full context
-- Uses utility harnesses for decision support
+Designed so an agent can operate the full stack, not just chat.
 
-**Ops surface**
-- Includes sample Discord channel structure (portable to any messaging app)
+### 4) Harnesses
+Utility modules for focused decision/execution lanes.
 
-### 4) Harnesses (starting with Market Pricing Harness)
-**What a harness is:** a focused execution module an agent can run for one utility lane.
+Current companion harness:
+- **Market Pricing Harness**: https://github.com/joe-josue/agentbnb-pricing-harness
 
-**Market Pricing Harness**
-- Scans local market comps
-- Applies seasonality/holiday context
-- Produces approval-gated pricing recommendations
+## Traceability and source alignment
 
-Repo: https://github.com/joe-josue/agentbnb-pricing-harness
+The stack structure and capability surface here is aligned to real, working patterns from Balay operations.
 
-## White-Label Templates in This Repo
+This repo is white-labeled and sanitized for public replication. Property-specific identifiers and private data are intentionally removed.
 
-- System of Record template: [`templates/system-of-record/`](./templates/system-of-record/)
-- Website template notes: [`templates/website/`](./templates/website/)
-- Agent template files (`AGENTS.md`, `SOUL.md`, channels): [`templates/agent/`](./templates/agent/)
+## Quick start
+
+1. Copy `stack/system-of-record-template/` into your property workspace.
+2. Clone `stack/website-template/` as your site starter and replace branding/config values.
+3. Copy `stack/agent-workspace-template/` for your hospitality agent runtime.
+4. Connect the market pricing harness when you are ready for pricing automation.
 
 ## Status
 
-`active-prototype`
+`replication-starter`
 
-- Stack framing is now component-first and capability-linked.
-- Clean-room templates are being expanded so operators can replicate faster.
-- More harnesses will be added as each capability lane is production-proven.
+- Core stack starter assets are now present.
+- More harnesses will be added as they become production-proven.
 
 ## Support
 
-- If AgentBNB helped you, give it a star and share it with another property operator.
-- For implementation or consulting work, contact `mail@joejosue.com`.
+- If AgentBNB helped, star the repo and share it.
+- For implementation support: `mail@joejosue.com`.
 
 ## License
 
-MIT.
+MIT

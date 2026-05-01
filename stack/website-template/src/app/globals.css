@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 10% 98%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 193 60% 30%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 15% 94%;
+    --secondary-foreground: 0 0% 20%;
+    --muted: 45 15% 94%;
+    --muted-foreground: 45 5% 42%;
+    --accent: 28 40% 59%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 45 15% 88%;
+    --input: 45 15% 88%;
+    --ring: 193 60% 30%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #FAFAF7;
+  }
+
+  body {
+    @apply bg-background text-ink font-sans;
+  }
+
+  h1, h2, h3 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .section-pad {
+    @apply py-20 md:py-28;
+  }
+
+  .text-hero-muted {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  /* react-day-picker brand overrides */
+  .rdp {
+    --rdp-accent-color: #1E6B7B;
+    --rdp-background-color: #e8f4f7;
+  }
+
+  .rdp-day_selected,
+  .rdp-day_selected:focus,
+  .rdp-day_selected:hover {
+    background-color: #1E6B7B !important;
+    color: white !important;
+  }
+
+  .rdp-day_range_middle {
+    background-color: #e8f4f7 !important;
+    color: #1E6B7B !important;
+  }
+
+  .rdp-day_range_start,
+  .rdp-day_range_end {
+    background-color: #1E6B7B !important;
+    color: white !important;
+  }
+}

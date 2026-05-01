@@ -6,42 +6,46 @@ Roadmap is organized by stack component and real shipped capability.
 
 ### v0.1.0 — Public baseline
 - [x] Public repo with initial stack narrative
-- [x] Balay Pansol case-study framing
+- [x] Balay case-study framing
 
 ### v0.2.0 — Capability sync
-- [x] Documentation aligned to live Balay capability surface
-- [x] Explicit companion harness linkage (`agentbnb-pricing-harness`)
+- [x] Docs aligned to live capability surface
+- [x] Companion harness linkage (`agentbnb-pricing-harness`)
 
-### v0.3.0 — Component-first stack framing
-- [x] Stack presented by SoR, Website, Agent, Harness
-- [x] White-label template scaffolds added for each major component
-- [x] Patch-notes doc removed from public UX path
+### v0.3.0 — Component-first framing
+- [x] Stack presented as SoR, Website, Agent, Harness
+- [x] Patch-notes removed from public UX path
+
+### v0.4.0 — Replication starter pack
+- [x] Added full SoR template pack (`stack/system-of-record-template/`)
+- [x] Added full website starter codebase (`stack/website-template/`)
+- [x] Added full agent workspace starter (`stack/agent-workspace-template/`)
+- [x] Reworked README for copy-ready replication flow
 
 ## Next
 
-### v0.4.0 — System of Record template hardening
-- [ ] Finalize canonical folder schema for property ops docs + media
-- [ ] Add starter scripts/workflows examples
-- [ ] Add migration guide for existing property docs
+### v0.5.0 — Website template hardening
+- [ ] Add setup script and seed config command
+- [ ] Add deployment checklist and post-deploy smoke tests
+- [ ] Add media placeholder pack and branding swap guide
 
-### v0.5.0 — Website template package
-- [ ] Publish clean-room starter for site + admin modules
-- [ ] Add env var reference and deployment checklist
-- [ ] Add sample booking + feedback data flow map
+### v0.6.0 — Agent workspace hardening
+- [ ] Add escalation policy matrix (auto/approval/manual)
+- [ ] Add guest comms QA checklist
+- [ ] Add multi-surface channel pack (Discord, Slack, Telegram)
 
-### v0.6.0 — Agent template package
-- [ ] Expand white-label `AGENTS.md` and `SOUL.md`
-- [ ] Add operator runbook and escalation patterns
-- [ ] Add messaging-surface variants (Discord-first, app-agnostic)
+### v0.7.0 — SoR migrations
+- [ ] Add import guide for existing OTA/site copy
+- [ ] Add SoR lint rules and consistency checks
+- [ ] Add changelog automation helper
 
-### v0.7.0 — Harness registry
-- [ ] Add harness index in repo
-- [ ] Add adoption guide for market-pricing harness
-- [ ] Add second production-proven harness
+### v0.8.0 — Harness registry
+- [ ] Add harness index in-repo
+- [ ] Add market-pricing harness adoption quickstart
+- [ ] Add second production-proven harness module
 
-### v1.0.0 — First full replication
-- [ ] New operator can deploy full stack end-to-end from docs/templates
-- [ ] Validation with at least one non-Balay property
-- [ ] Publish full outcomes + caveats case-study
+### v1.0.0 — First validated external replication
+- [ ] End-to-end replication by a non-Balay operator
+- [ ] Published outcomes + caveats case-study
 
-This roadmap stays execution-first: only production-proven lanes are marked shipped.
+Execution rule: only production-proven or directly deliverable assets are marked shipped.
