@@ -1,49 +1,45 @@
 # AgentBNB — Roadmap
 
-Where things are going. Ordered roughly by priority. Subject to what ships at Balay Pansol first.
+Capability roadmap aligned to what has actually shipped in Balay production and companion repos.
 
----
+## Shipped
 
-## v0.2.0 — Setup Guides
+### v0.1.0 — Public Baseline (shipped)
+- [x] Public repo with core stack narrative
+- [x] Initial roadmap and patch notes
+- [x] Balay Pansol case-study framing
 
-The first full wave of documentation for replication.
+### v0.2.0 — Capability Sync + Pricing Companion Linkage (shipped)
+- [x] README aligned to live Balay capability surface
+- [x] Capability-focused patch notes structure
+- [x] Explicit linkage to market pricing companion harness:
+  - `https://github.com/joe-josue/agentbnb-pricing-harness`
 
-- [ ] Google Sheets schema template (Inquiries tab + Bookings tab with all columns)
-- [ ] Resend inbound webhook configuration guide
-- [ ] Vercel cron setup (checkout reminder)
-- [ ] Environment variables reference (what you need, where to get each one)
+## Next
 
----
+### v0.3.0 — Clean-Room Setup Docs
+- [ ] Google Sheets schema template (Inquiries + Bookings)
+- [ ] Resend inbound + outbound setup guide
+- [ ] Admin API auth/env reference
+- [ ] Cron setup guide for checkout reminders
 
-## v0.3.0 — Admin Dashboard Template
+### v0.4.0 — Public Admin Template
+- [ ] Clean-room Next.js admin dashboard template
+- [ ] Inquiry and booking management flows as reusable modules
+- [ ] One-command deploy path to Vercel
 
-- [ ] Clean-room Next.js admin dashboard — inquiry list, booking list, send thank-you, cancel booking
-- [ ] Deploy to Vercel in one command
-- [ ] No property-specific values hardcoded — everything via env vars
+### v0.5.0 — Agent Workflow Template
+- [ ] Public OpenClaw skill template for recommendation loop
+- [ ] Recommend/approve/reject/escalate flow guide
+- [ ] Staff handoff / notes update pattern
 
----
+### v0.6.0 — Calendar and OTA Interop
+- [ ] iCal aggregation reference (Airbnb + Booking.com + manual blocks)
+- [ ] Calendar reconciliation pattern to Sheet source of record
 
-## v0.4.0 — Agent Brain (Gideon Skill Export)
+### v1.0.0 — First Full Replication
+- [ ] New operator can deploy full stack end-to-end from docs/templates
+- [ ] Validation pass with at least one non-Balay test property
+- [ ] Final case-study package (architecture + outcomes + caveats)
 
-- [ ] OpenClaw Gideon skill exported as a reusable template
-- [ ] Inquiry evaluation logic documented
-- [ ] Staff handoff card generation documented
-
----
-
-## v0.5.0 — Calendar Unification
-
-- [ ] iCal feed aggregation guide (Airbnb + Booking.com + manual blocks)
-- [ ] Blocked date sync to Google Sheets
-
----
-
-## v1.0.0 — First Complete Replication
-
-- [ ] A stranger can clone this repo and replicate the full stack from scratch using only the docs
-- [ ] All templates published and tested
-- [ ] Full case study write-up: Balay Pansol from zero to autonomous operations
-
----
-
-*Roadmap is updated as Balay Pansol ships.*
+Roadmap remains implementation-first: features are marked shipped only when proven in production or companion harnesses.
