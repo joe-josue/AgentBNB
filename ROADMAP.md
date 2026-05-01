@@ -1,45 +1,47 @@
 # AgentBNB — Roadmap
 
-Capability roadmap aligned to what has actually shipped in Balay production and companion repos.
+Roadmap is organized by stack component and real shipped capability.
 
 ## Shipped
 
-### v0.1.0 — Public Baseline (shipped)
-- [x] Public repo with core stack narrative
-- [x] Initial roadmap and patch notes
+### v0.1.0 — Public baseline
+- [x] Public repo with initial stack narrative
 - [x] Balay Pansol case-study framing
 
-### v0.2.0 — Capability Sync + Pricing Companion Linkage (shipped)
-- [x] README aligned to live Balay capability surface
-- [x] Capability-focused patch notes structure
-- [x] Explicit linkage to market pricing companion harness:
-  - `https://github.com/joe-josue/agentbnb-pricing-harness`
+### v0.2.0 — Capability sync
+- [x] Documentation aligned to live Balay capability surface
+- [x] Explicit companion harness linkage (`agentbnb-pricing-harness`)
+
+### v0.3.0 — Component-first stack framing
+- [x] Stack presented by SoR, Website, Agent, Harness
+- [x] White-label template scaffolds added for each major component
+- [x] Patch-notes doc removed from public UX path
 
 ## Next
 
-### v0.3.0 — Clean-Room Setup Docs
-- [ ] Google Sheets schema template (Inquiries + Bookings)
-- [ ] Resend inbound + outbound setup guide
-- [ ] Admin API auth/env reference
-- [ ] Cron setup guide for checkout reminders
+### v0.4.0 — System of Record template hardening
+- [ ] Finalize canonical folder schema for property ops docs + media
+- [ ] Add starter scripts/workflows examples
+- [ ] Add migration guide for existing property docs
 
-### v0.4.0 — Public Admin Template
-- [ ] Clean-room Next.js admin dashboard template
-- [ ] Inquiry and booking management flows as reusable modules
-- [ ] One-command deploy path to Vercel
+### v0.5.0 — Website template package
+- [ ] Publish clean-room starter for site + admin modules
+- [ ] Add env var reference and deployment checklist
+- [ ] Add sample booking + feedback data flow map
 
-### v0.5.0 — Agent Workflow Template
-- [ ] Public OpenClaw skill template for recommendation loop
-- [ ] Recommend/approve/reject/escalate flow guide
-- [ ] Staff handoff / notes update pattern
+### v0.6.0 — Agent template package
+- [ ] Expand white-label `AGENTS.md` and `SOUL.md`
+- [ ] Add operator runbook and escalation patterns
+- [ ] Add messaging-surface variants (Discord-first, app-agnostic)
 
-### v0.6.0 — Calendar and OTA Interop
-- [ ] iCal aggregation reference (Airbnb + Booking.com + manual blocks)
-- [ ] Calendar reconciliation pattern to Sheet source of record
+### v0.7.0 — Harness registry
+- [ ] Add harness index in repo
+- [ ] Add adoption guide for market-pricing harness
+- [ ] Add second production-proven harness
 
-### v1.0.0 — First Full Replication
+### v1.0.0 — First full replication
 - [ ] New operator can deploy full stack end-to-end from docs/templates
-- [ ] Validation pass with at least one non-Balay test property
-- [ ] Final case-study package (architecture + outcomes + caveats)
+- [ ] Validation with at least one non-Balay property
+- [ ] Publish full outcomes + caveats case-study
 
-Roadmap remains implementation-first: features are marked shipped only when proven in production or companion harnesses.
+This roadmap stays execution-first: only production-proven lanes are marked shipped.

@@ -2,98 +2,81 @@
 
 [![Status](https://img.shields.io/badge/Status-Active_Prototype-orange.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)]()
-[![Version](https://img.shields.io/badge/Version-0.2.0-informational.svg)]()
+[![Version](https://img.shields.io/badge/Version-0.3.0-informational.svg)]()
 
-Open-source hospitality operations stack for independent property owners, built around an AI agent that triages inquiries, manages booking decisions, and closes the guest loop.
+AgentBNB is a white-label hospitality operations stack, shaped from what is already running at Balay Pansol.
 
-[Capabilities](#capabilities-live-at-balay-pansol) · [Architecture](#architecture) · [Roadmap](./ROADMAP.md) · [Pricing Harness](https://github.com/joe-josue/agentbnb-pricing-harness) · [Support](#support)
+[Stack](#the-stack) · [Templates](#white-label-templates-in-this-repo) · [Roadmap](./ROADMAP.md) · [Pricing Harness](https://github.com/joe-josue/agentbnb-pricing-harness) · [Support](#support)
 
-> Battle-tested at [Balay Pansol](https://balaypansol.com). This repo tracks what is already working in production and maps it into public-safe patterns.
+## The Stack
 
-## Why
+### 1) System of Record (SoR)
+**What it is:** markdown-first property knowledge base and operating files.
 
-Most hospitality tools are built for humans to click through dashboards.
-AgentBNB is built for an agent to evaluate, recommend, and execute with approval gates.
+**Components**
+- Property information, amenities, policies, scripts, workflows
+- Image and media reference folders
+- Ops docs used by owner, staff, and agent
 
-## Capabilities Live at Balay Pansol
+**Why it matters**
+- Serves as source of truth for website content, listing consistency, and agent answers
+- Lets the agent update records as operations evolve
+- Keeps owner, staff, and guest communication aligned
 
-### Inquiry and Decision Flow
-- Guest inquiry capture from website form
-- Agent recommendation actions: `approve`, `reject`, `escalate`
-- Owner approval gate before final booking decision
-- Recommendation reasoning logged to the source of record
+### 2) Website
+**What it is:** stripped-down white-label version of the Balay operating site.
 
-### Booking Operations
-- Auto-create booking when inquiry is approved
-- Manual booking create/cancel endpoints for owner blocks and adjustments
-- Calendar month view with blocked dates, bookings, and pending inquiries
+**Technical stack**
+- Next.js + Tailwind (deployable on Vercel)
+- API routes for inquiry and admin flows
 
-### Guest Messaging Loop
-- Holding/reply messages to guests via Resend
-- Booking confirmation and decline flow
-- Post-stay thank-you flow with Google Review as primary CTA
-- Private feedback collection path for guests who do not post publicly
+**Capabilities**
+- Availability/calendar checking
+- Pricing estimator
+- Booking inquiry form
+- Admin side for inquiries, bookings, notes/briefing, and calendar
+- Feedback + Google Reviews flow
 
-### Agent + Ops Integration
-- OpenClaw agent webhook trigger on new inquiry
-- Daily checkout reminder cron to Discord
-- Admin API for agent-safe actions (inquiries, bookings, calendar, guest messaging)
+### 3) Agent
+**What it is:** white-label version of Gideon’s operating posture and workflow.
 
-### Market Pricing Companion (Available Now)
-- Companion repo: [agentbnb-pricing-harness](https://github.com/joe-josue/agentbnb-pricing-harness)
-- Includes market comps scan, location-aware holidays/seasonality, persona-based pricing, and approval-gated config patching
+**Core behavior**
+- Reads and maintains SoR context
+- Supports website operations and updates
+- Works with admin functions (inquiries, bookings, notes, calendar)
+- Handles guest communication with full context
+- Uses utility harnesses for decision support
 
-## Stack
+**Ops surface**
+- Includes sample Discord channel structure (portable to any messaging app)
 
-| Layer | Tool |
-|---|---|
-| Frontend & Admin | Next.js + Tailwind CSS (Vercel) |
-| Source of Record | Google Sheets |
-| Email | Resend (outbound + inbound handling) |
-| Agent Runtime | OpenClaw |
-| Human Approval Cockpit | Discord |
-| Scheduling | Vercel Cron |
+### 4) Harnesses (starting with Market Pricing Harness)
+**What a harness is:** a focused execution module an agent can run for one utility lane.
 
-## Architecture
+**Market Pricing Harness**
+- Scans local market comps
+- Applies seasonality/holiday context
+- Produces approval-gated pricing recommendations
 
-```text
-Guest Inquiry
-   -> Site API / Inbound Email
-   -> Agent (OpenClaw)
-      -> Checks Calendar + Inquiry Context
-      -> Sends Holding Message
-      -> Submits Recommendation (approve/reject/escalate)
-   -> Owner Approves/Rejects
-   -> Booking + Calendar Update
-   -> Checkout Cron Reminder
-   -> Thank-you + Review / Feedback Loop
-```
+Repo: https://github.com/joe-josue/agentbnb-pricing-harness
 
-## Repository Scope
+## White-Label Templates in This Repo
 
-This repo is the public-facing stack narrative and roadmap.
-Implementation components in active use are split across companion repos to keep boundaries clean:
-
-- Balay production implementation (private): `joe-josue/Balay-Pansol`
-- Market pricing layer (public): `joe-josue/agentbnb-pricing-harness`
+- System of Record template: [`templates/system-of-record/`](./templates/system-of-record/)
+- Website template notes: [`templates/website/`](./templates/website/)
+- Agent template files (`AGENTS.md`, `SOUL.md`, channels): [`templates/agent/`](./templates/agent/)
 
 ## Status
 
 `active-prototype`
 
-- Production capabilities are live at Balay Pansol.
-- Public clean-room templates are still being hardened for plug-and-play replication.
-- See [PATCH-NOTES.md](./PATCH-NOTES.md) for shipped capability updates.
-
-## Quick Start (Current)
-
-1. Read this repo for architecture and capability mapping.
-2. Use the companion [agentbnb-pricing-harness](https://github.com/joe-josue/agentbnb-pricing-harness) for market pricing workflows now.
-3. Follow [ROADMAP.md](./ROADMAP.md) for clean-room implementation template milestones.
+- Stack framing is now component-first and capability-linked.
+- Clean-room templates are being expanded so operators can replicate faster.
+- More harnesses will be added as each capability lane is production-proven.
 
 ## Support
 
-- If AgentBNB helped you, give it a star and share it with someone running a property.
+- If AgentBNB helped you, give it a star and share it with another property operator.
 - For implementation or consulting work, contact `mail@joejosue.com`.
 
 ## License
