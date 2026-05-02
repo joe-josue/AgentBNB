@@ -2,18 +2,24 @@
 
 [![Status](https://img.shields.io/badge/Status-Replication_Starter-orange.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)]()
-[![Version](https://img.shields.io/badge/Version-0.4.1-informational.svg)]()
+[![Version](https://img.shields.io/badge/Version-0.4.2-informational.svg)]()
 
-AgentBNB is a white-label hospitality operations stack extracted from a production implementation and packaged for complete replication.
+A white-label hospitality operations stack extracted from a production implementation and packaged for complete replication.
 
-[Replication Pack](./stack/) · [Roadmap](./ROADMAP.md) · [Pricing Harness](https://github.com/joe-josue/agentbnb-pricing-harness) · [Support](#support)
+[Stack Pack](./stack/) · [Roadmap](./ROADMAP.md) · [Pricing Harness](https://github.com/joe-josue/agentbnb-pricing-harness) · [Support](#support)
 
-## Stack Overview
+## Why
+
+Most hospitality software is built for humans to click buttons. AgentBNB is built for an agent to **think, recommend, and act**.
+
+The average independent property owner juggles inquiry responses, guest communication, staff briefings, and calendar management across fragmented threads and spreadsheets. AgentBNB replaces that with a persistent, autonomous operations layer that scales to one person running it alone.
+
+## Features
 
 ### 1) Customized AI Agent
 A specialized operations agent designed to handle the complete digital stack of your property setup.
 
-- **Stack Management:** Capable of website maintenance, content updates, and SoR management.
+- **Stack Management:** Capable of website maintenance, content updates, and System of Record management.
 - **Guest Communication:** Handles the full inquiry-to-checkout messaging flow with high context.
 - **Booking Progression:** Manages inquiry triage, availability checks, and booking state transitions.
 - **Advanced Ops:** Supports paid ads monitoring, caretaker briefing generation, and business record maintenance.
@@ -27,7 +33,7 @@ A markdown-based framework for filing and maintaining the canonical knowledge of
 - **Agent Managed:** The agent reads from and updates these records as things develop.
 
 ### 3) White-Label Site
-A deployable Next.js hospitality site that can be retrofitted (by a developer or the agent) for any property.
+A deployable Next.js hospitality site that can be retrofitted for any property.
 
 - **Frontend:** Beautiful single-scroll landing page designed for conversion.
 - **Booking Tools:** Reservations calendar with automated price estimates.
@@ -35,13 +41,9 @@ A deployable Next.js hospitality site that can be retrofitted (by a developer or
 - **Admin Dashboard:** Lean interface for reservation approvals, staff handoff notes, and calendar overview.
 
 ### 4) Harnesses
-Modular "super skills" that allow the agent to execute specialized utility lanes without complicating core operations.
+Modular execution modules that allow the agent to execute specialized utility lanes without complicating core operations.
 
 - **Market Pricing Harness:** Scans relevant competitors in a set radius, weights your property amenities against the compset, and recommends pricing adjustments based on market positioning.
-
-## Traceability
-
-The capability surface in this repo is 1:1 with working patterns from Balay Pansol operations. This stack is white-labeled and sanitized to remove property-specific identifiers while preserving the full functional architecture.
 
 ## Quick Start
 
@@ -50,9 +52,14 @@ The capability surface in this repo is 1:1 with working patterns from Balay Pans
 3. **Agent:** Initialize your runtime using `stack/agent-workspace-template/`.
 4. **Harness:** Connect the [Market Pricing Harness](https://github.com/joe-josue/agentbnb-pricing-harness) for automated rate management.
 
+## Status
+
+`replication-starter` — Core stack starter assets are now present. The capability surface in this repo is 1:1 with working patterns from Balay Pansol operations.
+
 ## Support
 
-- If AgentBNB helped you, star the repo and share it with another operator.
+- If AgentBNB helped you, give it a star and share it with another operator.
+- Interested in building something similar for yourself or your business? I do selected 0-1 product and implementation consulting.
 - For setup assistance or consulting inquiries, contact `mail@joejosue.com`.
 
 ## License
