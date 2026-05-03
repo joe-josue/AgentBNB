@@ -37,7 +37,7 @@ A specialized property agent (built from OpenClaw) designed to help run the comp
 
 A Markdown-first framework for filing the canonical knowledge of a property.
 
-![Caretaker handoff and operating notes](./assets/screenshots/caretaker-handoff.jpg)
+![AgentBNB System of Record](./assets/screenshots/agentbnb-system-of-record.png)
 
 - **Property facts:** Amenities, features, location notes, capacity, rules, rates, and current limitations.
 - **Operations records:** Guest scripts, check-in workflows, staff handoff templates, and change history.
@@ -59,9 +59,10 @@ A deployable Next.js hospitality site extracted from the Balay Pansol implementa
 
 Modular execution lanes that let the agent run specialized workflows without complicating core operations.
 
-![Pricing and property update workflow](./assets/screenshots/pricing-update.jpg)
+![AgentBNB Market Pricing Harness](./assets/screenshots/agentbnb-market-pricing-harness.png)
 
 - **Market Pricing Harness:** Scans relevant competitors in a radius, weighs property amenities and constraints, and recommends pricing adjustments for owner review.
+- **More Coming Soon:** SEO/AEO Sentry, Guest Background Check, Weather Intel, etc.
 
 ## Quick Start
 
@@ -81,7 +82,7 @@ Start with [`BOOTSTRAP.md`](./BOOTSTRAP.md). It is the canonical setup guide for
 | Source of record | Google Sheets plus Markdown property SoR |
 | Email | Resend outbound email and inbound webhook handling |
 | Agent | Property-specific agent workspace; the reference property uses Gideon on OpenClaw-style infrastructure |
-| Owner cockpit | Admin dashboard plus owner recommendation flow |
+| Site Admin Dashboard | Admin dashboard plus owner recommendation flow |
 | Staff handoff | Editable booking notes designed for copy/paste to caretakers |
 | Follow-up | Thank-you email, review page, and review status stored per booking |
 
