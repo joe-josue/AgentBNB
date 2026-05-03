@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)]()
 [![Version](https://img.shields.io/badge/Version-0.4.2-informational.svg)]()
 
-A white-label hospitality operations stack extracted from Balay Pansol and Gideon, its OpenClaw-powered hospitality agent.
+A white-label hospitality operations stack for running Airbnb-like properties with an AI-assisted agent.
 
 [Stack Pack](./stack/) | [Reference Implementation](./docs/reference-implementation.md) | [Data Contracts](./docs/data-contracts.md) | [Pricing Harness](https://github.com/joe-josue/agentbnb-pricing-harness) | [Support](#support)
 
@@ -14,15 +14,19 @@ A white-label hospitality operations stack extracted from Balay Pansol and Gideo
 
 ## Why
 
-The average independent property owner juggles inquiry responses, guest communication, staff briefings, calendar management, pricing, and listing updates across fragmented threads and spreadsheets. AgentBNB packages the operating pattern used at Balay Pansol into a reusable stack an agent can help run.
+The average independent property owner juggles inquiry responses, guest communication, staff briefings, calendar management, pricing, and listing updates across fragmented threads and spreadsheets. AgentBNB packages that work into a reusable stack an agent can help run.
 
-The production pattern is intentionally approval-gated. Gideon can read the source of record, evaluate an inquiry, draft guest communication, update staff handoffs, and recommend the next action, but sensitive business decisions still route back to the owner.
+AgentBNB was open-sourced from a real setup: Balay Pansol, a family-owned vacation pool house operated like an Airbnb-style short-stay property with a direct-booking site, admin dashboard, source of record, and AI agent workflow. The internal agent for that property is named Gideon; in your own setup, the agent would be your own property-specific operator using the same pattern.
+
+The production pattern is intentionally approval-gated. The agent can read the source of record, evaluate an inquiry, draft guest communication, update staff handoffs, and recommend the next action, but sensitive business decisions still route back to the owner.
 
 ## Features
 
 ### 1. Customized AI Agent
 
-A specialized operations agent designed to help run the complete digital stack of a short-stay property.
+A specialized property agent designed to help run the complete digital stack of a short-stay property.
+
+![Agent recommendation flow](./assets/screenshots/agent-recommendation.jpg)
 
 - **Inquiry triage:** Checks requested dates, headcount, stay type, guest message, and known property constraints.
 - **Guest communication:** Drafts or sends controlled guest messages through the admin API.
@@ -33,6 +37,8 @@ A specialized operations agent designed to help run the complete digital stack o
 
 A Markdown-first framework for filing the canonical knowledge of a property.
 
+![Caretaker handoff and operating notes](./assets/screenshots/caretaker-handoff.jpg)
+
 - **Property facts:** Amenities, features, location notes, capacity, rules, rates, and current limitations.
 - **Operations records:** Guest scripts, check-in workflows, staff handoff templates, and change history.
 - **Listing parity:** Keeps direct-site, Airbnb, Booking.com, and social copy aligned.
@@ -42,6 +48,8 @@ A Markdown-first framework for filing the canonical knowledge of a property.
 
 A deployable Next.js hospitality site extracted from the Balay Pansol implementation.
 
+![White-label direct booking site](./assets/screenshots/white-label-site.jpg)
+
 - **Public site:** Single-scroll property page with inquiry flow and pricing estimate.
 - **Admin dashboard:** Inquiry approval, booking management, calendar overview, and handoff notes.
 - **Google Sheets backend:** Low-cost source of record for inquiries, bookings, reviews, and follow-up state.
@@ -50,6 +58,8 @@ A deployable Next.js hospitality site extracted from the Balay Pansol implementa
 ### 4. Harnesses
 
 Modular execution lanes that let the agent run specialized workflows without complicating core operations.
+
+![Pricing and property update workflow](./assets/screenshots/pricing-update.jpg)
 
 - **Market Pricing Harness:** Scans relevant competitors in a radius, weighs property amenities and constraints, and recommends pricing adjustments for owner review.
 
@@ -68,7 +78,7 @@ Modular execution lanes that let the agent run specialized workflows without com
 | Public site and admin | Next.js 14, Tailwind CSS, Vercel |
 | Source of record | Google Sheets plus Markdown property SoR |
 | Email | Resend outbound email and inbound webhook handling |
-| Agent | Gideon, built on OpenClaw-style agent infrastructure |
+| Agent | Property-specific agent workspace; the reference property uses Gideon on OpenClaw-style infrastructure |
 | Owner cockpit | Admin dashboard plus owner recommendation flow |
 | Staff handoff | Editable booking notes designed for copy/paste to caretakers |
 | Follow-up | Thank-you email, review page, and review status stored per booking |
@@ -77,7 +87,7 @@ Modular execution lanes that let the agent run specialized workflows without com
 
 `replication-starter`
 
-Core stack starter assets are present in [`stack/`](./stack/). The intended direction is to keep extracting from the working Balay Pansol/Gideon implementation into reusable, property-agnostic templates.
+Core stack starter assets are present in [`stack/`](./stack/). The intended direction is to keep extracting from the working reference implementation into reusable, property-agnostic templates.
 
 ## Support
 
