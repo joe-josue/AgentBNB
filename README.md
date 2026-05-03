@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)]()
 [![Version](https://img.shields.io/badge/Version-0.4.2-informational.svg)]()
 
-A white-label hospitality operations stack for running Airbnb-like properties with an AI-assisted agent.
+### Agent BNB is white-label hospitality operations stack for running Airbnb-like properties with an AI agent.
 
 [Stack Pack](./stack/) | [Reference Implementation](./docs/reference-implementation.md) | [Data Contracts](./docs/data-contracts.md) | [Pricing Harness](https://github.com/joe-josue/agentbnb-pricing-harness) | [Support](#support)
 
@@ -14,24 +14,24 @@ A white-label hospitality operations stack for running Airbnb-like properties wi
 
 ## Why
 
-The average independent property owner juggles inquiry responses, guest communication, staff briefings, calendar management, pricing, and listing updates across fragmented threads and spreadsheets. AgentBNB packages that work into a reusable stack an agent can help run.
+The average independent property owner juggles inquiry responses, guest communication, staff briefings, calendar management, pricing, and listing updates across fragmented threads and spreadsheets. AgentBNB packages that work into a reusable digital stack an agent can run.
 
-AgentBNB was open-sourced from a real setup: Balay Pansol, a family-owned vacation pool house operated like an Airbnb-style short-stay property with a direct-booking site, admin dashboard, source of record, and AI agent workflow. The internal agent for that property is named Gideon; in your own setup, the agent would be your own property-specific operator using the same pattern.
-
-The production pattern is intentionally approval-gated. The agent can read the source of record, evaluate an inquiry, draft guest communication, update staff handoffs, and recommend the next action, but sensitive business decisions still route back to the owner.
+AgentBNB was open-sourced from a real setup: Balay Pansol (BalayPansol.com), a family-owned vacation pool house operated like an Airbnb-style short-stay property with a 90% if it's digital stack done by an AI agent workflow. The internal agent for that property is named Gideon; in your own setup, the agent would be your own property-specific operator using built on the frameworks of BalayPansol and Gideon.
 
 ## Features
 
 ### 1. Customized AI Agent
 
-A specialized property agent designed to help run the complete digital stack of a short-stay property.
+A specialized property agent (built from OpenClaw) designed to help run the complete digital stack of a short-stay property.
 
 ![Agent recommendation flow](./assets/screenshots/agent-recommendation.jpg)
 
+- **Guest communication:** Drafts or sends controlled guest messages via email, and Meta Apps messages.
 - **Inquiry triage:** Checks requested dates, headcount, stay type, guest message, and known property constraints.
-- **Guest communication:** Drafts or sends controlled guest messages through the admin API.
 - **Booking progression:** Recommends approve, reject, or escalate while keeping the owner in the loop.
 - **Staff handoff:** Maintains caretaker briefing notes from booking details and guest updates.
+- **Website Development & Updates:** Codes website according to relevant updates (and virtually any need on the site)
+- **[NEW] End-to-End Ads Management:** Operators end-to-end Ads on Meta Apps.
 
 ### 2. System Of Record Framework
 
