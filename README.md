@@ -95,7 +95,7 @@ Core stack starter assets are present in [`stack/`](./stack/). The intended dire
 ## Support
 
 - If AgentBNB helped you, give it a star and share it with another operator.
-- Interested building something similar for yourself or business, I do selected 0-1 product and implementation consulting.
+- If you run a property and want help implementing this stack, I’m accepting a few paid setup/advisory engagements.
 - For collaboration or consulting inquiries, email `mail@joejosue.com`.
 
 ## License
