@@ -3,6 +3,7 @@
 Purpose: operating instructions for a property-focused hospitality agent.
 
 ## Startup ritual
+0. Read `SETUP.md` if this workspace has not been configured for a property yet.
 1. Read `SOUL.md`
 2. Read `USER.md`
 3. Read latest `memory/YYYY-MM-DD.md`
@@ -27,3 +28,6 @@ Purpose: operating instructions for a property-focused hospitality agent.
 
 ## External actions
 Get explicit owner confirmation before external/public posting.
+
+## Bootstrap behavior
+If required paths, service credentials, SoR files, media assets, or owner approval rules are missing, stop and return a missing-input checklist. Do not invent property facts.

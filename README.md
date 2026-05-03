@@ -6,7 +6,7 @@
 
 ### Agent BNB is white-label hospitality operations stack for running Airbnb-like properties with an AI agent.
 
-[Stack Pack](./stack/) | [Reference Implementation](./docs/reference-implementation.md) | [Data Contracts](./docs/data-contracts.md) | [Pricing Harness](https://github.com/joe-josue/agentbnb-pricing-harness) | [Support](#support)
+[Bootstrap](./BOOTSTRAP.md) | [Stack Pack](./stack/) | [Reference Implementation](./docs/reference-implementation.md) | [Data Contracts](./docs/data-contracts.md) | [Pricing Harness](https://github.com/joe-josue/agentbnb-pricing-harness) | [Support](#support)
 
 <p align="center">
   <img src="./assets/icon.png" alt="AgentBNB logo" width="176" />
@@ -64,6 +64,8 @@ Modular execution lanes that let the agent run specialized workflows without com
 - **Market Pricing Harness:** Scans relevant competitors in a radius, weighs property amenities and constraints, and recommends pricing adjustments for owner review.
 
 ## Quick Start
+
+Start with [`BOOTSTRAP.md`](./BOOTSTRAP.md). It is the canonical setup guide for both humans and agents.
 
 1. **System of Record:** Copy [`stack/system-of-record-template/`](./stack/system-of-record-template/) to your property workspace.
 2. **Website:** Copy [`stack/website-template/`](./stack/website-template/) and update property config, metadata, copy, and environment variables.

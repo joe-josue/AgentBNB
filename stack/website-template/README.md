@@ -20,6 +20,8 @@ cp .env.local.example .env.local
 npm run dev
 ```
 
+For the full property setup sequence, read [`../../BOOTSTRAP.md`](../../BOOTSTRAP.md).
+
 ## Branding and data you must replace
 
 - Property name and copy in `src/lib/config.ts`
@@ -31,6 +33,8 @@ npm run dev
 
 - API surface: `./AGENT_API.md`
 - Env vars: `.env.local.example`
+- External service guidance: `../../docs/external-services.md`
+- Deployment options: `../../docs/deployment-options.md`
 
 ## Notes
 
