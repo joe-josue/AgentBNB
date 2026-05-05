@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { Menu } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
@@ -9,16 +10,18 @@ import { PROPERTY_CONFIG } from '@/lib/config'
 import { cn } from '@/lib/utils'
 
 const navLinks = [
-  { href: '#story', label: 'Our Story' },
-  { href: '#spaces', label: 'The Space' },
-  { href: '#gallery', label: 'Gallery' },
-  { href: '#availability', label: 'Availability' },
-  { href: '#faq', label: 'FAQ' },
+  { href: '/#story', label: 'Our Story' },
+  { href: '/#spaces', label: 'The Space' },
+  { href: '/#gallery', label: 'Gallery' },
+  { href: '/pricechecker', label: 'Availability' },
+  { href: '/faq', label: 'FAQ' },
 ]
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const pathname = usePathname()
+  const solidNav = scrolled || pathname !== '/'
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -26,20 +29,15 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const handleNavClick = (href: string) => {
+  const handleMobileNavClick = () => {
     setMobileOpen(false)
-    const el = document.querySelector(href)
-    if (el) {
-      const top = (el as HTMLElement).offsetTop - 80
-      window.scrollTo({ top, behavior: 'smooth' })
-    }
   }
 
   return (
     <header
       className={cn(
         'transition-all duration-300',
-        scrolled
+        solidNav
           ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-sm'
           : 'bg-transparent'
       )}
@@ -50,7 +48,7 @@ export function Navbar() {
           href="/"
           className={cn(
             'font-serif text-lg font-medium tracking-wide transition-colors',
-            scrolled ? 'text-ink' : 'text-white'
+            solidNav ? 'text-ink' : 'text-white'
           )}
         >
           {PROPERTY_CONFIG.name}
@@ -59,28 +57,28 @@ export function Navbar() {
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
-            <button
+            <Link
               key={link.href}
-              onClick={() => handleNavClick(link.href)}
+              href={link.href}
               className={cn(
                 'text-sm font-sans font-medium transition-colors hover:opacity-80',
-                scrolled ? 'text-ink' : 'text-white/90'
+                solidNav ? 'text-ink' : 'text-white/90'
               )}
             >
               {link.label}
-            </button>
+            </Link>
           ))}
           <Button
-            onClick={() => handleNavClick('#inquire')}
+            asChild
             size="sm"
             className={cn(
               'ml-2 transition-all',
-              scrolled
+              solidNav
                 ? 'bg-primary text-white hover:bg-primary-dark'
                 : 'bg-white text-primary hover:bg-white/90'
             )}
           >
-            Inquire Now
+            <Link href="/reserve">Inquire Now</Link>
           </Button>
         </div>
 
@@ -90,7 +88,7 @@ export function Navbar() {
             <button
               className={cn(
                 'md:hidden p-2 rounded-md transition-colors',
-                scrolled ? 'text-ink' : 'text-white'
+                solidNav ? 'text-ink' : 'text-white'
               )}
               aria-label="Open menu"
             >
@@ -103,20 +101,23 @@ export function Navbar() {
                 {PROPERTY_CONFIG.name}
               </p>
               {navLinks.map((link) => (
-                <button
+                <Link
                   key={link.href}
-                  onClick={() => handleNavClick(link.href)}
+                  href={link.href}
+                  onClick={handleMobileNavClick}
                   className="text-left px-4 py-3 text-ink font-sans text-base hover:bg-muted rounded-lg transition-colors"
                 >
                   {link.label}
-                </button>
+                </Link>
               ))}
               <div className="mt-4 px-4">
                 <Button
-                  onClick={() => handleNavClick('#inquire')}
+                  asChild
                   className="w-full bg-primary text-white hover:bg-primary-dark"
                 >
-                  Inquire Now
+                  <Link href="/reserve" onClick={handleMobileNavClick}>
+                    Inquire Now
+                  </Link>
                 </Button>
               </div>
             </div>

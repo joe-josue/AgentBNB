@@ -18,7 +18,7 @@ If you are setting up a real property, start with [`../BOOTSTRAP.md`](../BOOTSTR
    - Includes AGENTS/SOUL/USER/TOOLS/MEMORY/HEARTBEAT and channel/runbook templates.
 
 4. Harness companion
-   - Market pricing harness repo:
+   - Official Market Pricing Harness repo:
    - https://github.com/joe-josue/agentbnb-pricing-harness
 
 ## Intent

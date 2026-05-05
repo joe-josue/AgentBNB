@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "project": "AgentBNB",
+  "repoUrl": "https://github.com/joe-josue/AgentBNB",
+  "latestVersion": "0.2.0",
+  "publicVersioningStartedAt": "2026-05-04",
+  "releasePolicy": {
+    "summary": "AgentBNB ships in intentional public versions. Local work is consolidated first, then released only after a version brief has been reviewed.",
+    "firstPublicRelease": "0.1.0",
+    "noBackfillBefore": "2026-05-04"
+  },
+  "releases": [
+    {
+      "version": "0.2.0",
+      "code": "v0.2.0",
+      "date": "2026-05-06",
+      "title": "Pricing Harness, Versions, Dedicated Pages",
+      "status": "shipped",
+      "summary": "This release rounds out AgentBNB's public operating surface with the official pricing harness, clean release history, and dedicated white-label guest pages.",
+      "commit": "",
+      "links": [
+        {
+          "label": "Pricing harness",
+          "url": "https://github.com/joe-josue/agentbnb-pricing-harness"
+        },
+        {
+          "label": "Version history",
+          "url": "https://github.com/joe-josue/AgentBNB/blob/master/VERSION_HISTORY.md"
+        }
+      ],
+      "notes": [
+        "Market Pricing Harness is now treated as an official affiliated AgentBNB harness, with a professionalized repo, clearer AgentBNB integration guidance, init/pulse/sync/sweep modes, owner approval gates, multi-currency support, URL and pin extraction, and deterministic tests.",
+        "Version history is now first-class in the repo and on the website, with canonical structured release data, a human-readable repo page, a dedicated website page, and an RSS feed for release updates.",
+        "White-label website template now includes dedicated /faq, /pricechecker, and /reserve pages so operators, guests, agents, SEO surfaces, and external integrations can link directly to the exact guest-facing workflow they need."
+      ]
+    },
+    {
+      "version": "0.1.0",
+      "code": "v0.1.0",
+      "date": "2026-05-04",
+      "title": "AI Agent, SoR, Website, Harnesses",
+      "status": "shipped",
+      "summary": "The first public AgentBNB release ships the launch feature set for AI-assisted short-stay property operations.",
+      "commit": "4763237",
+      "links": [
+        {
+          "label": "GitHub repo",
+          "url": "https://github.com/joe-josue/AgentBNB"
+        },
+        {
+          "label": "Bootstrap guide",
+          "url": "https://github.com/joe-josue/AgentBNB/blob/master/BOOTSTRAP.md"
+        }
+      ],
+      "notes": [
+        "Customized AI hospitality agent pattern for inquiry triage, guest messaging, owner recommendations, booking progression, staff handoff notes, website updates, and ads-management support.",
+        "Markdown-first property system of record framework for property facts, operating records, listing parity, and agent context.",
+        "White-label Next.js site and admin stack with direct inquiry flow, approval dashboard, Google Sheets backend, confirmation email, thank-you email, review page, and review tracking.",
+        "Harness lane begins with market-pricing recommendations that compare nearby competitors, weigh property constraints, and prepare owner-reviewed price updates.",
+        "Public docs, feature visuals, setup path, and support CTA make the launch stack understandable for operators and forkable for developers."
+      ]
+    }
+  ]
+}

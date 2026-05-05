@@ -66,12 +66,12 @@ export function FooterSection() {
             </p>
             <div className="space-y-2">
               {[
-                { href: '#story', label: 'Our Story' },
-                { href: '#spaces', label: 'The Space' },
-                { href: '#gallery', label: 'Gallery' },
-                { href: '#availability', label: 'Availability' },
-                { href: '#faq', label: 'FAQ' },
-                { href: '#inquire', label: 'Inquire' },
+                { href: '/#story', label: 'Our Story' },
+                { href: '/#spaces', label: 'The Space' },
+                { href: '/#gallery', label: 'Gallery' },
+                { href: '/pricechecker', label: 'Availability' },
+                { href: '/faq', label: 'FAQ' },
+                { href: '/reserve', label: 'Inquire' },
               ].map(({ href, label }) => (
                 <a
                   key={href}

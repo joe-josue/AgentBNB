@@ -5,6 +5,7 @@ This is a full Next.js hospitality starter codebase, white-labeled from a produc
 ## Included capabilities
 
 - Public property site sections
+- Dedicated guest/agent link pages: `/faq`, `/pricechecker`, and `/reserve`
 - Inquiry form (`/api/inquire`)
 - Availability API (`/api/availability`)
 - Admin login + dashboard (`/admin`)
@@ -40,3 +41,4 @@ For the full property setup sequence, read [`../../BOOTSTRAP.md`](../../BOOTSTRA
 
 - This starter is intentionally white-labeled.
 - Replace placeholders before production deploy.
+- Dedicated pages exist so guests, agents, SEO surfaces, and external integrations can link directly to FAQ, availability/pricing, and reservation workflows instead of relying only on homepage anchors.

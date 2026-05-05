@@ -2,15 +2,25 @@
 
 [![Status](https://img.shields.io/badge/Status-Replication_Starter-orange.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)]()
-[![Version](https://img.shields.io/badge/Version-0.4.2-informational.svg)]()
+[![Version](https://img.shields.io/badge/Version-0.2.0-informational.svg)]()
 
 ### Agent BNB is white-label hospitality operations stack for running Airbnb-like properties with an AI agent.
 
-[Bootstrap](./BOOTSTRAP.md) | [Stack Pack](./stack/) | [Reference Implementation](./docs/reference-implementation.md) | [Data Contracts](./docs/data-contracts.md) | [Pricing Harness](https://github.com/joe-josue/agentbnb-pricing-harness) | [Support](#support)
+[Bootstrap](./BOOTSTRAP.md) | [Stack Pack](./stack/) | [Reference Implementation](./docs/reference-implementation.md) | [Data Contracts](./docs/data-contracts.md) | [Version History](./VERSION_HISTORY.md) | [Pricing Harness](https://github.com/joe-josue/agentbnb-pricing-harness) | [Support](#support)
 
 <p align="center">
   <img src="./assets/icon.png" alt="AgentBNB logo" width="176" />
 </p>
+
+## Latest Release: What's in v0.2.0
+
+`v0.2.0` is the latest AgentBNB release, shipped on `2026-05-06`.
+
+- **Market Pricing Harness official release:** The affiliated harness now has a professionalized repo, clearer AgentBNB integration guidance, init/pulse/sync/sweep modes, owner approval gates, multi-currency support, URL and pin extraction, and deterministic tests.
+- **Version history in repo and on the website:** AgentBNB now has canonical structured release data, a human-readable repo page, a dedicated website page, and an RSS feed for release updates.
+- **Dedicated white-label guest pages:** The website template now includes `/faq`, `/pricechecker`, and `/reserve` so operators, guests, agents, SEO surfaces, and external integrations can link directly to the exact workflow they need.
+
+See [`VERSION_HISTORY.md`](./VERSION_HISTORY.md) for the release history and future release discipline.
 
 ## Why
 
